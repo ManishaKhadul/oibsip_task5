@@ -1,0 +1,180 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #FFF3E0; 
+  color: #3E2723;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  height: 60vh;
+  background: linear-gradient(45deg, #FFB74D, #FF9800); 
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-content {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.main-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.quote {
+  font-size: 1rem;
+  margin: 20px 0;
+  font-style: italic;
+  max-width: 500px;
+}
+
+.scroll-button {
+  display: inline-block;
+  background-color: #FF9800;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.scroll-button:hover {
+  background-color: #F57C00;
+  transform: translateY(-3px);
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.image-section {
+  flex: 1; 
+  background: linear-gradient(180deg, #FFCC80, #FFB74D); 
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frame {
+  width: 80%;
+  max-width: 400px; 
+  border: 8px solid #FF6F00;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-frame:hover {
+  transform: scale(1.05);
+}
+
+.image-frame img {
+  width: 100%;
+  display: block;
+}
+
+.biography {
+  flex: 1; 
+  background: linear-gradient(135deg, #FFB74D, #FF9800);
+  padding: 30px;
+  text-align: center;
+  border-left: 5px solid #FF6F00;
+  animation: slideIn 1.2s ease-out;
+}
+
+.biography .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.biography h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: #3E2723;
+}
+
+.biography p {
+  font-size: 1.1rem;
+  color: #3E2723;
+  margin-bottom: 15px;
+}
+
+/* Footer Section */
+.footer {
+  background: linear-gradient(45deg, #FF9800, #FF6F00);
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100%); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .image-section, .biography {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .image-frame {
+      width: 70%; 
+      max-width: 350px;
+  }
+}
